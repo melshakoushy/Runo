@@ -37,6 +37,9 @@
                                     <constraint firstAttribute="width" constant="55" id="y5p-Rs-tl4"/>
                                 </constraints>
                                 <state key="normal" image="centerNavButton"/>
+                                <connections>
+                                    <action selector="centerLocationBtnPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="OCq-4H-LMv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HE5-6S-Ygm">
                                 <rect key="frame" x="155" y="502" width="65" height="65"/>
@@ -79,6 +82,9 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Run" image="tabbar-runIconGray" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="mapView" destination="hBC-6O-16I" id="WPY-0D-5T6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
-        <!--View Controller-->
+        <!--On RunVC-->
         <scene sceneID="Nm9-2e-Mws">
             <objects>
-                <viewController id="cAc-Hl-EDd" sceneMemberID="viewController">
+                <viewController id="cAc-Hl-EDd" customClass="OnRunVC" customModule="Runo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5WK-2d-log">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -286,10 +292,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMl-1j-LUZ">
                                 <rect key="frame" x="247" y="552" width="75" height="75"/>
                                 <state key="normal" image="pauseButton"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJD-7M-ktm">
-                                <rect key="frame" x="52" y="561" width="57" height="57"/>
-                                <state key="normal" image="endRunButton"/>
+                                <connections>
+                                    <action selector="pauseBtnPressed:" destination="cAc-Hl-EDd" eventType="touchUpInside" id="crC-QC-dhO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="END RUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vvl-YR-Yip">
                                 <rect key="frame" x="128" y="577" width="89.5" height="25.5"/>
@@ -297,6 +302,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJD-7M-ktm">
+                                <rect key="frame" x="52" y="561" width="57" height="57"/>
+                                <state key="normal" image="endRunButton"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -328,6 +337,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KJ3-SV-kIX"/>
                     </view>
+                    <connections>
+                        <outlet property="distanceLbl" destination="qWQ-9J-mXx" id="bZ5-Uk-aqi"/>
+                        <outlet property="durationLbl" destination="MCc-Yf-PrZ" id="1Kw-Ke-f6N"/>
+                        <outlet property="paceLbl" destination="btb-66-RQ6" id="YH1-E8-ibo"/>
+                        <outlet property="pauseBtn" destination="eMl-1j-LUZ" id="yOV-eI-eiB"/>
+                        <outlet property="sliderBGImageView" destination="kFw-0z-4Hg" id="Ujd-Tg-2w4"/>
+                        <outlet property="sliderImageView" destination="CJD-7M-ktm" id="5oV-ZW-as1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Pt-ce-rav" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
