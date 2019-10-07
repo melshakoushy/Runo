@@ -21,7 +21,7 @@ class OnRunVC: LocationVC {
     var startLocation: CLLocation!
     var lastLocation: CLLocation!
     
-    var runDistance: Double = 0.0
+    var runDistance = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +83,12 @@ extension OnRunVC: CLLocationManagerDelegate {
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        <#code#>
+        if startLocation == nil {
+            startLocation = locations.first
+        } else if let location = locations.first {
+            runDistance += lastLocation.distance(from: location)
+            distanceLbl.text = "\(runDistance)"
+        }
+        lastLocation = locations.last
     }
 }
