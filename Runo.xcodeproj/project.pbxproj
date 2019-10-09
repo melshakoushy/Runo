@@ -13,8 +13,10 @@
 		0B2F881522E2001D002912F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2F881322E2001D002912F7 /* Main.storyboard */; };
 		0B2F881722E20025002912F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2F881622E20025002912F7 /* Assets.xcassets */; };
 		0B2F881A22E20025002912F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2F881822E20025002912F7 /* LaunchScreen.storyboard */; };
+		2EB4D8CFB6234AEFA0AE8CB4 /* Pods_Runo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6986B0FFD5C772F65A4E7165 /* Pods_Runo.framework */; };
 		4666BB882334B4970003FB31 /* OnRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666BB872334B4970003FB31 /* OnRunVC.swift */; };
 		4666BB8A2334B6950003FB31 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666BB892334B6950003FB31 /* LocationVC.swift */; };
+		4666BBAA233AB4030003FB31 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666BBA9233AB4030003FB31 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +28,12 @@
 		0B2F881622E20025002912F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B2F881922E20025002912F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B2F881B22E20025002912F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1E1E4DA6F8EC57EDA4BF91 /* Pods-Runo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runo.release.xcconfig"; path = "Target Support Files/Pods-Runo/Pods-Runo.release.xcconfig"; sourceTree = "<group>"; };
 		4666BB872334B4970003FB31 /* OnRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnRunVC.swift; sourceTree = "<group>"; };
 		4666BB892334B6950003FB31 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
+		4666BBA9233AB4030003FB31 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6986B0FFD5C772F65A4E7165 /* Pods_Runo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCD92BD5D22AD91E5FDC2ACB /* Pods-Runo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runo.debug.xcconfig"; path = "Target Support Files/Pods-Runo/Pods-Runo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EB4D8CFB6234AEFA0AE8CB4 /* Pods_Runo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +53,8 @@
 			children = (
 				0B2F880C22E2001D002912F7 /* Runo */,
 				0B2F880B22E2001D002912F7 /* Products */,
+				DAA94F492AE6BB8A5A318ABE /* Pods */,
+				601B02029C2DE09A7B56F875 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +101,7 @@
 		464DA1862327127400BC1B82 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4666BBA9233AB4030003FB31 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -121,6 +131,24 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		601B02029C2DE09A7B56F875 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6986B0FFD5C772F65A4E7165 /* Pods_Runo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAA94F492AE6BB8A5A318ABE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCD92BD5D22AD91E5FDC2ACB /* Pods-Runo.debug.xcconfig */,
+				3F1E1E4DA6F8EC57EDA4BF91 /* Pods-Runo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B2F881E22E20025002912F7 /* Build configuration list for PBXNativeTarget "Runo" */;
 			buildPhases = (
+				EC6F4781F9B930F16C8BABCC /* [CP] Check Pods Manifest.lock */,
 				0B2F880622E2001D002912F7 /* Sources */,
 				0B2F880722E2001D002912F7 /* Frameworks */,
 				0B2F880822E2001D002912F7 /* Resources */,
+				AEFB02EE827AF67AEF4D7AB7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,12 +217,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AEFB02EE827AF67AEF4D7AB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runo/Pods-Runo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runo/Pods-Runo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runo/Pods-Runo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC6F4781F9B930F16C8BABCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Runo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0B2F880622E2001D002912F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4666BB8A2334B6950003FB31 /* LocationVC.swift in Sources */,
+				4666BBAA233AB4030003FB31 /* Extensions.swift in Sources */,
 				0B2F881222E2001D002912F7 /* LogVC.swift in Sources */,
 				0B2F880E22E2001D002912F7 /* AppDelegate.swift in Sources */,
 				0B2F881022E2001D002912F7 /* BeginRunVC.swift in Sources */,
@@ -344,6 +417,7 @@
 		};
 		0B2F881F22E20025002912F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCD92BD5D22AD91E5FDC2ACB /* Pods-Runo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -362,6 +436,7 @@
 		};
 		0B2F882022E20025002912F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F1E1E4DA6F8EC57EDA4BF91 /* Pods-Runo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

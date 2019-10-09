@@ -20,8 +20,11 @@ class OnRunVC: LocationVC {
     
     var startLocation: CLLocation!
     var lastLocation: CLLocation!
+    var timer = Timer()
     
     var runDistance: Double = 0.0
+    var counter = 0
+    var pace = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +43,44 @@ class OnRunVC: LocationVC {
     
     func startRun() {
         manager?.startUpdatingLocation()
+        startTimer()
+        pauseBtn.setImage(UIImage(named: "pauseButton"), for: .normal)
     }
     
     func endRun() {
         manager?.stopUpdatingLocation()
+        
+    }
+    
+    func pauseRun() {
+        startLocation = nil
+        lastLocation = nil
+        timer.invalidate()
+        manager?.stopUpdatingLocation()
+        pauseBtn.setImage(UIImage(named: "resumeButton"), for: .normal)
+    }
+    
+    func startTimer() {
+        durationLbl.text = counter.formateTimeDurationToString()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateCounter() {
+        counter += 1
+        durationLbl.text = counter.formateTimeDurationToString()
+    }
+    
+    func calculatePace(second: Int , miles: Double) -> String {
+        pace = Int(Double(second) / miles)
+        return pace.formateTimeDurationToString()
     }
     
     @IBAction func pauseBtnPressed(_ sender: Any) {
-        
+        if timer.isValid {
+           pauseRun()
+        } else {
+            startRun()
+        }
     }
     
     
@@ -61,6 +94,7 @@ class OnRunVC: LocationVC {
                     sliderView.center.x = sliderView.center.x + translation.x
                 } else if sliderView.center.x >= (sliderBGImageView.center.x + maxAdjust) {
                     sliderView.center.x = sliderBGImageView.center.x + maxAdjust
+                    endRun()
                     dismiss(animated: true, completion: nil)
                 } else {
                     sliderView.center.x = sliderBGImageView.center.x - minAdjust
@@ -83,6 +117,15 @@ extension OnRunVC: CLLocationManagerDelegate {
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        <#code#>
+        if startLocation == nil {
+            startLocation = locations.first
+        } else if let location = locations.last {
+            runDistance += lastLocation.distance(from: location)
+            distanceLbl.text = "\(runDistance.metersToMiles(places: 2))"
+            if counter > 0 && runDistance > 0 {
+                paceLbl.text = calculatePace(second: counter, miles: runDistance.metersToMiles(places: 2))
+            }
+        }
+        lastLocation = locations.last
     }
 }
