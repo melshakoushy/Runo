@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,9 +14,14 @@
 		0B2F881722E20025002912F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2F881622E20025002912F7 /* Assets.xcassets */; };
 		0B2F881A22E20025002912F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2F881822E20025002912F7 /* LaunchScreen.storyboard */; };
 		2EB4D8CFB6234AEFA0AE8CB4 /* Pods_Runo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6986B0FFD5C772F65A4E7165 /* Pods_Runo.framework */; };
+		461D6A9C23546E2E000F97A9 /* RunLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D6A9B23546E2E000F97A9 /* RunLogCell.swift */; };
+		461D6A9E23548B98000F97A9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D6A9D23548B98000F97A9 /* Location.swift */; };
+		461D6AA02354A278000F97A9 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D6A9F2354A278000F97A9 /* RealmConfig.swift */; };
 		4666BB882334B4970003FB31 /* OnRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666BB872334B4970003FB31 /* OnRunVC.swift */; };
 		4666BB8A2334B6950003FB31 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666BB892334B6950003FB31 /* LocationVC.swift */; };
 		4666BBAA233AB4030003FB31 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666BBA9233AB4030003FB31 /* Extensions.swift */; };
+		46E19EB72353C990003E4630 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E19EB62353C990003E4630 /* Run.swift */; };
+		46E19EB92353D2B7003E4630 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E19EB82353D2B7003E4630 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +34,14 @@
 		0B2F881922E20025002912F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B2F881B22E20025002912F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1E1E4DA6F8EC57EDA4BF91 /* Pods-Runo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runo.release.xcconfig"; path = "Target Support Files/Pods-Runo/Pods-Runo.release.xcconfig"; sourceTree = "<group>"; };
+		461D6A9B23546E2E000F97A9 /* RunLogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogCell.swift; sourceTree = "<group>"; };
+		461D6A9D23548B98000F97A9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		461D6A9F2354A278000F97A9 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 		4666BB872334B4970003FB31 /* OnRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnRunVC.swift; sourceTree = "<group>"; };
 		4666BB892334B6950003FB31 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		4666BBA9233AB4030003FB31 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		46E19EB62353C990003E4630 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		46E19EB82353D2B7003E4630 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6986B0FFD5C772F65A4E7165 /* Pods_Runo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD92BD5D22AD91E5FDC2ACB /* Pods-Runo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runo.debug.xcconfig"; path = "Target Support Files/Pods-Runo/Pods-Runo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +104,8 @@
 		464DA1852327126500BC1B82 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				46E19EB82353D2B7003E4630 /* Constants.swift */,
+				461D6A9F2354A278000F97A9 /* RealmConfig.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -109,6 +121,7 @@
 		464DA1872327128E00BC1B82 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				461D6A9B23546E2E000F97A9 /* RunLogCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,6 +129,8 @@
 		464DA1882327129400BC1B82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				46E19EB62353C990003E4630 /* Run.swift */,
+				461D6A9D23548B98000F97A9 /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -145,7 +160,6 @@
 				DCD92BD5D22AD91E5FDC2ACB /* Pods-Runo.debug.xcconfig */,
 				3F1E1E4DA6F8EC57EDA4BF91 /* Pods-Runo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -266,10 +280,15 @@
 			files = (
 				4666BB8A2334B6950003FB31 /* LocationVC.swift in Sources */,
 				4666BBAA233AB4030003FB31 /* Extensions.swift in Sources */,
+				461D6A9E23548B98000F97A9 /* Location.swift in Sources */,
 				0B2F881222E2001D002912F7 /* LogVC.swift in Sources */,
 				0B2F880E22E2001D002912F7 /* AppDelegate.swift in Sources */,
 				0B2F881022E2001D002912F7 /* BeginRunVC.swift in Sources */,
+				46E19EB72353C990003E4630 /* Run.swift in Sources */,
+				461D6A9C23546E2E000F97A9 /* RunLogCell.swift in Sources */,
+				461D6AA02354A278000F97A9 /* RealmConfig.swift in Sources */,
 				4666BB882334B4970003FB31 /* OnRunVC.swift in Sources */,
+				46E19EB92353D2B7003E4630 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
