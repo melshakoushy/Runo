@@ -51,5 +51,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).logVC</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>MyLog</string>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>MountainShort</string>
+		</dict>
+	</array>
 </dict>
 </plist>

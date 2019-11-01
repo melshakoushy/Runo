@@ -12,11 +12,33 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var vcarray = [UIViewController]()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let logVC = storyboard.instantiateViewController(withIdentifier: "logVC") as! LogVC
+        vcarray = [logVC]
         return true
+    }
+    enum shortcutType : String {
+        case logVC = "logVC"
+    }
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        if let type = shortcutItem.type.components(separatedBy: ".").last {
+            let navVC = window?.rootViewController as! UINavigationController
+            navVC.setViewControllers(vcarray, animated: false)
+            switch type {
+            case shortcutType.logVC.rawValue :
+                navVC.popToViewController(vcarray[0], animated: true)
+                completionHandler(true)
+            default:
+                navVC.popToRootViewController(animated: true)
+                completionHandler(true)
+            }
+        }
+        completionHandler(false)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

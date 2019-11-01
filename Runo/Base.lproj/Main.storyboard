@@ -13,7 +13,7 @@
         <!--Run-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="BeginRunVC" customModule="Runo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="beginRunVC" id="9pv-A4-QxB" customClass="BeginRunVC" customModule="Runo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,12 +192,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="750" y="-322"/>
         </scene>
         <!--My Log-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="LogVC" customModule="Runo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logVC" id="8rJ-Kc-sve" customClass="LogVC" customModule="Runo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -331,7 +331,7 @@
         <!--On RunVC-->
         <scene sceneID="Nm9-2e-Mws">
             <objects>
-                <viewController id="cAc-Hl-EDd" customClass="OnRunVC" customModule="Runo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onRunVC" id="cAc-Hl-EDd" customClass="OnRunVC" customModule="Runo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5WK-2d-log">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
